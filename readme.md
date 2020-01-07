@@ -21,3 +21,10 @@ const App = () => {
     );
 };
 ```
+
+#### Props
+ - `value (String)`: Initial value (Optional) *
+ - `placeholder (String)`: Placeholder (Optional) *
+ - `styles (Object)`: Custom styles (Optional) 
+
+(*) At least one of this fields must be passed or an exception will be thrown. 
