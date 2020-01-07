@@ -1,7 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
 
-const DynamicTextField = ({ value = "", placeholder = "", styles = {} }) => {
+const DynamicTextField = ({
+  value = "",
+  placeholder = "",
+  styles = {},
+  onChange = () => {},
+  ...rest
+}) => {
   // Styles
   const txtStyles = {
     textfield: {
@@ -44,13 +50,17 @@ const DynamicTextField = ({ value = "", placeholder = "", styles = {} }) => {
         autoComplete="off"
         spellCheck={false}
         placeholder={placeholder}
-        onChange={e => setTextFieldValue(e.currentTarget.value)}
+        onChange={e => {
+          setTextFieldValue(e.currentTarget.value);
+          onChange(e);
+        }}
         style={{
           ...txtStyles.textfield,
           ...txtStyles.textfieldInput,
           ...styles,
           width: titleWidth
         }}
+        {...rest}
       />
 
       <span
