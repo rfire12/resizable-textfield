@@ -1,5 +1,5 @@
 # resizable-textfield 
-![stable](https://img.shields.io/badge/v1.0.10-stable-green) ![licence](https://img.shields.io/badge/status-success-blue)
+![stable](https://img.shields.io/badge/v1.0.11-stable-green) ![licence](https://img.shields.io/badge/status-success-blue)
 
 
 A React package that allows you to have a textfield with the length of its text dynamically.

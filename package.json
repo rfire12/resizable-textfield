@@ -1,6 +1,6 @@
 {
   "name": "resizable-textfield",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "private": false,
   "description": "A resizable texfield",
   "main": "index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/rfire12/resizable-textfield"
   },
   "author": "Raul Paulino",
   "license": "ISC",
