@@ -1,6 +1,6 @@
 {
   "name": "resizable-textfield",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "private": false,
   "description": "A resizable texfield",
   "main": "index.js",
@@ -36,5 +36,14 @@
     "css-loader": "^3.2.0",
     "style-loader": "^1.0.0",
     "typescript": "^3.7.4"
-  }
+  },
+  "keywords": [
+    "react",
+    "textfield",
+    "resizable",
+    "dynamically",
+    "txtField",
+    "search",
+    "input"
+  ]
 }
