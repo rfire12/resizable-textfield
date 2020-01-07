@@ -1,8 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
 import PropTypes from "prop-types";
-import "./index.css";
 
 const DynamicTextField = ({ value = "", placeholder = "", styles = {} }) => {
+  // Styles
+  const txtStyles = {
+    textfield: {
+      border: "2px solid rgb(9, 123, 199)",
+      borderRadius: "3px",
+      color: "white",
+      display: "inline-block",
+      fontFamily: "sans-serif",
+      fontSize: "1.2em",
+      fontWeight: "bolder",
+      margin: "0",
+      outline: "none",
+      padding: "5px 15px",
+      position: "absolute",
+      transform: "translate(0%, 0%)",
+      whiteSpace: "pre-wrap"
+    },
+    textfieldSpan: { border: "0", visibility: "hidden" },
+    textfieldInput: { color: "black", padding: "3px 15px" }
+  };
+
   const [textFieldValue, setTextFieldValue] = useState(value);
 
   const [titleWidth, setTitleWidth] = useState("");
@@ -12,14 +32,13 @@ const DynamicTextField = ({ value = "", placeholder = "", styles = {} }) => {
   const titleInputRef = useRef(null);
 
   useEffect(() => {
-    setTitleWidth(`${titleSpanRef.current.offsetWidth - 30}px`);
+    setTitleWidth(`${titleSpanRef.current.offsetWidth - 29}px`);
   }, [textFieldValue]);
 
   return (
-    <>
+    <div>
       <input
         type="text"
-        className="textfield textfield-input"
         ref={titleInputRef}
         value={textFieldValue}
         autoComplete="off"
@@ -27,15 +46,23 @@ const DynamicTextField = ({ value = "", placeholder = "", styles = {} }) => {
         placeholder={placeholder}
         onChange={e => setTextFieldValue(e.currentTarget.value)}
         style={{
+          ...txtStyles.textfield,
+          ...txtStyles.textfieldInput,
           ...styles,
           width: titleWidth
         }}
       />
 
-      <span className="textfield textfield-span" ref={titleSpanRef}>
+      <span
+        ref={titleSpanRef}
+        style={{
+          ...txtStyles.textfield,
+          ...txtStyles.textfieldSpan
+        }}
+      >
         {textFieldValue === "" ? placeholder : textFieldValue}
       </span>
-    </>
+    </div>
   );
 };
 

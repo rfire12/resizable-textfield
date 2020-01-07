@@ -1,12 +1,11 @@
 {
-  "name": "dynamic-textfield",
-  "version": "1.0.0",
+  "name": "resizable-textfield",
+  "version": "1.0.5",
   "private": false,
-  "description": "Dynamic size texfield",
+  "description": "A resizable texfield",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --mode development --content-base src --hot --inline",
-    "build": "webpack --mode production",
+    "build": "./node_modules/.bin/babel src -d ./ --copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,16 +15,17 @@
   "author": "Raul Paulino",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rfire12/dynamic-textfield/issues"
+    "url": "https://github.com/rfire12/resizable-textfield/issues"
   },
   "homepage": "",
-  "dependencies": {
+  "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.2",
     "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
@@ -33,6 +33,7 @@
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "style-loader": "^1.0.0",
-    "typescript": "^3.7.4",
-  }
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {}
 }
