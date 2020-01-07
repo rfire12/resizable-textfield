@@ -11,11 +11,11 @@ A React package that allows you to have a textfield with the length of its text 
 ### Example usage
 
 ```
-npm i "resizable-textdield"
+npm i "resizable-textfield"
 ```
 
 ```
-import ResizableTexField from "resizable-textdield";
+import ResizableTexField from "resizable-textfield";
 
 const App = () => {
     return (
