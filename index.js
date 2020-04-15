@@ -88,7 +88,7 @@ var DynamicTextField = function DynamicTextField(_ref) {
   var titleSpanRef = (0, _react.useRef)(null);
   var titleInputRef = (0, _react.useRef)(null);
   (0, _react.useEffect)(function () {
-    setTitleWidth("".concat(titleSpanRef.current.offsetWidth - 29, "px"));
+    setTitleWidth("".concat(titleSpanRef.current.offsetWidth - 30, "px"));
   }, [textFieldValue]);
   return _react["default"].createElement("div", null, _react["default"].createElement("input", _extends({
     type: "text",
