@@ -38,7 +38,7 @@ const DynamicTextField = ({
   const titleInputRef = useRef(null);
 
   useEffect(() => {
-    setTitleWidth(`${titleSpanRef.current.offsetWidth - 29}px`);
+    setTitleWidth(`${titleSpanRef.current.offsetWidth - 30}px`);
   }, [textFieldValue]);
 
   return (
